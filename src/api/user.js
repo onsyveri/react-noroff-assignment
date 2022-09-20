@@ -23,7 +23,7 @@ const createUser = async (username) => {
             headers: createHeaders(),
             body: JSON.stringify({
                 username,
-                orders: []
+                translations: []
             })
         })
         if (!response.ok) {
