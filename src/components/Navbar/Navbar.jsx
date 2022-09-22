@@ -8,10 +8,13 @@ const Navbar = () => {
     return (
         <nav>
            { user !== null &&
-                <ul>
-                    <li><NavLink to="/translation">Translation</NavLink></li>
-                    <li><NavLink to="/profile">Profile</NavLink></li>
-                </ul>
+                <>
+                    <h1>Translation</h1>
+                    <ul>
+                        <li><NavLink to="/translation">Translation</NavLink></li>
+                        <li><NavLink to="/profile">Profile</NavLink></li>
+                    </ul>
+                </>
             }
         </nav>
     )

@@ -61,13 +61,12 @@ const TranslationForm = () => {
             <form onSubmit={ handleSubmit(onSubmit) }>
 
                 <fieldset>
-                    <label htmlFor="translation-field">Translate word:</label>  
-                    <input type="text" {...register('translationField')} placeholder="Type in word..." />
+                    <input type="text" {...register('translationField')} placeholder="Type in word you want to translate..." />
                 </fieldset>
 
-                <button type="submit">Translate</button>
+                <button id="btnTranslate" type="submit">Translate</button>
 
-                <section> { handImage } </section>
+                <section id="imgView"> { handImage } </section>
 
             </form>
 

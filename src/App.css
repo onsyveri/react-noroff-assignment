@@ -1,0 +1,90 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #424242;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+}
+
+
+/* Navbar related ------------------------------------------------------------ */
+h1 {
+    color: white;
+    margin-left: 20px;
+}
+
+nav {
+    margin: 0 auto;
+    background-color: #282828;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 100px;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    padding: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #424242;
+}
+
+
+/* Translation page -------------------------------------------------- */
+
+fieldset {
+    border: 0px;
+    padding: 10px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+input {
+    padding: 20px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing:border-box;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+#btnTranslate {
+    margin-top: 10px;
+    color: white;
+    background-color: darkred;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+#btnTranslate:hover {
+    background-color: #a50000;
+    border: 2px solid #a50000;
+}
+
+#imgView {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+    border: 5px solid lightgray;
+    border-radius: 10px;
+    background-color: lightgray;
+}
