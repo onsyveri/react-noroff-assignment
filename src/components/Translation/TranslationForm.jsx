@@ -37,8 +37,9 @@ const TranslationForm = () => {
         
         setLoading(false) */
         //console.log("yo: " + )
+        console.log(data.translationField.toLowerCase())
 
-        let letterArr = data.translationField.split('')
+        let letterArr = data.translationField.toLowerCase().split('')
         setTranslateWord(letterArr)
         
     }
@@ -54,35 +55,26 @@ const TranslationForm = () => {
                 <button
                 onClick={() => {
 
+                    let TEST = []
+
                     for (let i = 0; i < translateWord.length; i++) {
 
                         for (let y = 0; y < 26; y++) {
 
                             if(translateWord[i] === IMAGES[y].id) {
-                                console.log(translateWord[i])
-                                setHandImage(<WordTranslated key={ translateWord[i].id } source={ "img/" + translateWord[i] + ".png" } />)
+                                let OBJ = {}
+                                OBJ.id = i
+                                OBJ.source = "img/" + translateWord[i] + ".png"
+                                TEST.push(OBJ);
                             }
 
                         }
 
                     }
 
-                    //setHandImage( <WordTranslated key={ "a" } source={ "a" } />
-                       /* IMAGES.map( signImage => {
-
-                            for (let i = 0; i < translateWord.length; i++) {
-
-                                if(translateWord[i] === signImage.id) {
-                                    console.log(translateWord[i])
-                                    return <WordTranslated key={ signImage.id } source={ signImage.source } />
-                                }
-                                
-                            }
-
-                            return null
-
-                        }) */
-                    //)
+                    setHandImage(TEST.map( signImage => {
+                         return <WordTranslated key={ signImage.id } source={ signImage.source } /> 
+                    }))
 
                 }}
                     type="submit"
