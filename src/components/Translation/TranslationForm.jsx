@@ -53,7 +53,7 @@ const TranslationForm = () => {
                 </fieldset>
 
                 <button
-                onClick={() => {
+                onClick={() => { // Onclick puts letters that match alphabet in another array
 
                     let TEST = []
 
@@ -61,7 +61,7 @@ const TranslationForm = () => {
 
                         for (let y = 0; y < 26; y++) {
 
-                            if(translateWord[i] === IMAGES[y].id) {
+                            if(translateWord[i] === IMAGES[y].id) { // Compare letter from input word to the alphabet
                                 let OBJ = {}
                                 OBJ.id = i
                                 OBJ.source = "img/" + translateWord[i] + ".png"
@@ -72,7 +72,7 @@ const TranslationForm = () => {
 
                     }
 
-                    setHandImage(TEST.map( signImage => {
+                    setHandImage(TEST.map( signImage => { // Maps the new array and sets it as the handImage using useState()
                          return <WordTranslated key={ signImage.id } source={ signImage.source } /> 
                     }))
 
