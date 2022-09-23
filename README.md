@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Login page
+
+The login page allows you to enter your name and login. If you are new your user will be saved for future use. If you are revisiting it will recognize your name and log you in with your exsisting user.
+
+## Translation page
+
+Here you can enter a word you want to translate. When you have entered your word you can press the translate button to see the result.
+
+## Profile page
+
+Here you can see a list with your translation history. You can use the Clear History button to delete your history if you want to. You can also logout with the logout button.
