@@ -13,6 +13,8 @@ const ProfileActions = () => {
         }
     }
 
+    
+
     return (
         <ul id="ulProfile">
             <li><button id="btnLogout" onClick={ handleLogoutClick }>Logout</button></li>
