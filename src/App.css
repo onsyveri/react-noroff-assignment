@@ -13,8 +13,12 @@ img {
 
 
 /* Navbar related ------------------------------------------------------------ */
-h1 {
+
+h1, h2, h4 {
     color: white;
+}
+
+#navH1 {
     margin-left: 20px;
 }
 
@@ -27,13 +31,18 @@ nav {
     gap: 100px;
 }
 
-ul {
+#navUl {
     padding: 0;
     display: flex;
 }
 
+ul {
+    padding: 0;
+}
+
 li {
     list-style-type: none;
+    color: white;
 }
 
 a {
@@ -65,7 +74,7 @@ input {
     border-radius: 20px;
 }
 
-#btnTranslate {
+#btnTranslate, #btnContinue {
     margin-top: 10px;
     color: white;
     background-color: darkred;
@@ -75,9 +84,13 @@ input {
     width: 300px;
 }
 
-#btnTranslate:hover {
+#btnTranslate:hover, #btnContinue:hover {
     background-color: #a50000;
     border: 2px solid #a50000;
+}
+
+#btnContinue:disabled {
+    opacity: 0.5;
 }
 
 #imgView {
@@ -87,4 +100,48 @@ input {
     border: 5px solid lightgray;
     border-radius: 10px;
     background-color: lightgray;
+}
+
+
+/* Login page ----------------------------------------------------------- */
+
+#pLoading {
+    color: white;
+}
+
+
+/* Profile page --------------------------------------------------------- */
+
+#ulProfile {
+    padding: 0;
+    margin: 0 auto;
+}
+
+#btnLogout {
+    color: white;
+    background-color: darkred;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    padding: 5px;
+    width: 200px;
+}
+
+#btnLogout:hover {
+    background-color: #c60000;
+    border: 2px solid #c60000;
+}
+
+#btnClear {
+    margin-top: 20px;
+    color: black;
+    background-color: #ffd500;
+    border: 2px solid #ffd500;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+#btnClear:hover {
+    background-color: yellow;
+    border: 2px solid yellow;
 }

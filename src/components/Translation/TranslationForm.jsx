@@ -16,43 +16,31 @@ const TranslationForm = () => {
     const { register, handleSubmit } = useForm()
 
     const [handImage, setHandImage] = useState(null)
-    const [translateWord, setTranslateWord] = useState(null)
-
-    //const [ apiError, setApiError ] = useState(null)
-    //const [ loading, setLoading ] = useState(false)
     
     const onSubmit = data => {
 
         let letterArr =  data.translationField.toLowerCase().split('')
-        //setTranslateWord(letterArr)
 
         let TEST = []
 
-        if (translateWord !== null) {
+        for (let i = 0; i < letterArr.length; i++) {
 
-            for (let i = 0; i < letterArr.length; i++) {
+            for (let y = 0; y < 26; y++) {
 
-                for (let y = 0; y < 26; y++) {
-
-                    if(letterArr[i] === IMAGES[y].id) { // Compare letter from input word to the alphabet
-                        let OBJ = {}
-                        OBJ.id = i
-                        OBJ.source = "img/" + letterArr[i] + ".png"
-                        TEST.push(OBJ);
-                    }
-
+                if(letterArr[i] === IMAGES[y].id) { // Compare letter from input word to the alphabet
+                    let OBJ = {}
+                    OBJ.id = i
+                    OBJ.source = "img/" + letterArr[i] + ".png"
+                    TEST.push(OBJ);
                 }
 
             }
 
-            setHandImage(TEST.map( signImage => { // Maps the new array and sets it as the handImage using useState()
-                    return <WordTranslated key={ signImage.id } source={ signImage.source } /> 
-            }))
         }
 
-        if (letterArr === null) {
-            console.log("Confirm by pressing again")
-        }
+        setHandImage(TEST.map( signImage => { // Maps the new array and sets it as the handImage using useState()
+                return <WordTranslated key={ signImage.id } source={ signImage.source } /> 
+        }))
         
     }
 
