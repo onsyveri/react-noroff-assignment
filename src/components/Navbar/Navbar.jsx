@@ -9,7 +9,7 @@ const Navbar = () => {
         <nav>
            { user !== null &&
                 <>
-                    <h1 id="navH1">Translation</h1>
+                    <h1 id="navH1">Lost in Translation</h1>
                     <ul id="navUl">
                         <li><NavLink to="/translation">Translation</NavLink></li>
                         <li><NavLink to="/profile">Profile</NavLink></li>
