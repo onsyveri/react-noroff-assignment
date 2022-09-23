@@ -24,20 +24,20 @@ const TranslationForm = () => {
     const onSubmit = data => {
 
         let letterArr =  data.translationField.toLowerCase().split('')
-        setTranslateWord(letterArr)
+        //setTranslateWord(letterArr)
 
         let TEST = []
 
         if (translateWord !== null) {
 
-            for (let i = 0; i < translateWord.length; i++) {
+            for (let i = 0; i < letterArr.length; i++) {
 
                 for (let y = 0; y < 26; y++) {
 
-                    if(translateWord[i] === IMAGES[y].id) { // Compare letter from input word to the alphabet
+                    if(letterArr[i] === IMAGES[y].id) { // Compare letter from input word to the alphabet
                         let OBJ = {}
                         OBJ.id = i
-                        OBJ.source = "img/" + translateWord[i] + ".png"
+                        OBJ.source = "img/" + letterArr[i] + ".png"
                         TEST.push(OBJ);
                     }
 
@@ -50,7 +50,7 @@ const TranslationForm = () => {
             }))
         }
 
-        if (translateWord === null) {
+        if (letterArr === null) {
             console.log("Confirm by pressing again")
         }
         
